@@ -8,5 +8,6 @@
     <dimen name="title_text_size">22sp</dimen>
     <dimen name="edit_text_text_size">16sp</dimen>
     <dimen name="button_text_size">14sp</dimen>
-    <dimen name="button_stroke_width">4</dimen>
+    <dimen name="button_stroke_width">2dp</dimen>
+    <dimen name="theme_button_margin">8dp</dimen>
 </resources>
