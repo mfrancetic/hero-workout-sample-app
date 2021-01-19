@@ -13,4 +13,6 @@
     <string name="password_number_missing">Bitte gib mindestens eine Zahl ein</string>
     <string name="special_character_missing">Bitte gib mindestens ein Sonderzeichen ein</string>
     <string name="password_invalid">Bitte gib ein gültiges Passwort ein</string>
+    <string name="you_have_successfully_logged_in">Sie haben sich erfolgreich eingeloggt!</string>
+    <string name="all_fields_must_be_valid">E-Mail und Passwort müssen gültig sein</string>
 </resources>

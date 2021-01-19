@@ -9,7 +9,7 @@ const val PASSWORD_CAPITAL_LETTER_MISSING = "CAPITAL_LETTER_MISSING"
 const val PASSWORD_NUMBER_MISSING = "NUMBER_MISSING"
 const val PASSWORD_SPECIAL_CHARACTER_MISSING = "SPECIAL_CHARACTER_MISSING"
 
-fun isEmailValid(email: String): Boolean {
+fun isEmailAddressValid(email: String): Boolean {
     return Patterns.EMAIL_ADDRESS.matcher(email)
         .matches()
 }
