@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        topLevelDestinations = setOf(R.id.loginFragment)
+        topLevelDestinations = setOf(R.id.splashFragment, R.id.loginFragment)
         appBarConfiguration = AppBarConfiguration.Builder(topLevelDestinations)
             .build()
 
