@@ -7,4 +7,10 @@
     <string name="login">Einloggen</string>
     <string name="dark_theme">Dark Theme</string>
     <string name="light_theme">Light Theme</string>
+    <string name="email_invalid">Bitte gib eine gültige E-mail Adresse ein</string>
+    <string name="capital_letter_missing">Bitte geb einen Großbuchastaben ein</string>
+    <string name="password_too_short">Bitte gib mindestens 12 Zeichen ein</string>
+    <string name="password_number_missing">Bitte gib mindestens eine Zahl ein</string>
+    <string name="special_character_missing">Bitte gib mindestens ein Sonderzeichen ein</string>
+    <string name="password_invalid">Bitte gib ein gültiges Passwort ein</string>
 </resources>

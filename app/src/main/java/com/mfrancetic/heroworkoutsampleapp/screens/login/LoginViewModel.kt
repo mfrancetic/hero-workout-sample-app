@@ -10,8 +10,18 @@ class LoginViewModel : ViewModel() {
     val changeThemeEvent: LiveData<Boolean>
         get() = _changeToDarkThemeEvent
 
+    private val _email = MutableLiveData<String>()
+    val email: MutableLiveData<String>
+        get() = _email
+
+    private val _password = MutableLiveData<String>()
+    val password: MutableLiveData<String>
+        get() = _password
+
     init {
         _changeToDarkThemeEvent.value = true
+        _email.value = ""
+        _password.value = ""
     }
 
     fun onLightThemeButtonClicked() {
