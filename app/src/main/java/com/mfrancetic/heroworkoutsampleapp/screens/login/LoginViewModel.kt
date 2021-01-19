@@ -60,10 +60,6 @@ class LoginViewModel : ViewModel() {
         _changeToDarkThemeEvent.value = true
     }
 
-    fun onChangeThemeEventDone() {
-        _changeToDarkThemeEvent.value = null
-    }
-
     fun onLoginButtonClicked() {
         _loginButtonClickedEvent.value = true
     }

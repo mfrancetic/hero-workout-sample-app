@@ -43,7 +43,6 @@ class LoginFragment : Fragment() {
         viewModel.changeThemeEvent.observe(viewLifecycleOwner, { changeThemeEvent ->
             if (changeThemeEvent != null) {
                 changeTheme(changeThemeEvent)
-                viewModel.onChangeThemeEventDone()
             }
         })
 
@@ -138,9 +137,17 @@ class LoginFragment : Fragment() {
         when (changeThemeEvent) {
             true -> {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                binding.loginConstraintLayout.background = ContextCompat.getDrawable(
+                    fragmentContext,
+                    R.drawable.login_background
+                )
             }
             false -> {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                binding.loginConstraintLayout.background = ContextCompat.getDrawable(
+                    fragmentContext,
+                    R.color.white
+                )
             }
         }
     }
