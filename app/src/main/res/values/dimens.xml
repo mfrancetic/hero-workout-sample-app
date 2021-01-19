@@ -10,4 +10,6 @@
     <dimen name="button_text_size">14sp</dimen>
     <dimen name="button_stroke_width">2dp</dimen>
     <dimen name="theme_button_margin">8dp</dimen>
+    <dimen name="fragment_padding">64dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
 </resources>

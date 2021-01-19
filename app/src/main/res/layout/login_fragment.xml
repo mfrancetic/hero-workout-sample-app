@@ -14,7 +14,10 @@
         android:id="@+id/login_constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/default_padding"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"
+        android:paddingTop="@dimen/fragment_padding"
+        android:paddingBottom="@dimen/default_padding"
         tools:context=".screens.login.LoginFragment">
 
         <ImageView
@@ -33,7 +36,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:fontFamily="@font/roboto_bold"
-            android:padding="@dimen/default_padding"
+            android:paddingVertical="@dimen/padding_large"
             android:text="@string/welcome_back"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold"
@@ -93,6 +96,7 @@
             style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_large"
             android:autofillHints="@string/password"
             android:onClick="@{() -> viewModel.onLoginButtonClicked()}"
             android:text="@string/login"
