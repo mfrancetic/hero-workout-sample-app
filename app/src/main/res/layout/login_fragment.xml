@@ -19,10 +19,10 @@
 
         <ImageView
             android:id="@+id/login_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/login_logo_width"
+            android:layout_height="@dimen/login_logo_height"
             android:contentDescription="@string/logo_content_description"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,9 +31,11 @@
             android:id="@+id/welcome_back_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
             android:padding="@dimen/default_padding"
             android:text="@string/welcome_back"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/login_logo" />
@@ -51,10 +53,12 @@
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="@string/email"
                 android:hint="@string/email"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
-                android:text="@={viewModel.email}" />
+                android:text="@={viewModel.email}"
+                android:textSize="@dimen/edit_text_text_size" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -71,15 +75,17 @@
                 android:id="@+id/password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints="@string/email"
+                android:autofillHints="@string/password"
                 android:hint="@string/password"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
-                android:text="@={viewModel.password}" />
+                android:text="@={viewModel.password}"
+                android:textSize="@dimen/edit_text_text_size" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/login_button"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="@string/password"
@@ -90,6 +96,7 @@
 
         <Button
             android:id="@+id/dark_theme_button"
+            style="@style/ButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:onClick="@{() -> viewModel.onDarkThemeButtonClicked()}"
@@ -101,6 +108,7 @@
 
         <Button
             android:id="@+id/light_theme_button"
+            style="@style/ButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:onClick="@{() -> viewModel.onLightThemeButtonClicked()}"

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
@@ -19,6 +20,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var viewModel: LoginViewModel
     private lateinit var binding: LoginFragmentBinding
+    private lateinit var fragmentContext: Context
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +35,7 @@ class LoginFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         binding.viewModel = viewModel
+        fragmentContext = binding.darkThemeButton.context
         setupObservers()
     }
 
@@ -133,8 +136,12 @@ class LoginFragment : Fragment() {
 
     private fun changeTheme(changeThemeEvent: Boolean) {
         when (changeThemeEvent) {
-            true -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            false -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            true -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            false -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
     }
 }

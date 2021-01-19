@@ -32,8 +32,6 @@ class MainActivity : AppCompatActivity() {
         topLevelDestinations = setOf(R.id.splashFragment, R.id.loginFragment)
         appBarConfiguration = AppBarConfiguration.Builder(topLevelDestinations)
             .build()
-
-        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean {
