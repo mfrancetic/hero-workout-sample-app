@@ -100,7 +100,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun displayLoginDialog() {
-        val builder = AlertDialog.Builder(requireActivity(), R.style.Theme_AppCompat_Dialog)
+        val builder = AlertDialog.Builder(requireActivity(), R.style.Theme_AppCompat_DayNight_Dialog)
             .setMessage(getString(R.string.you_have_successfully_logged_in))
         builder.create().show()
     }
