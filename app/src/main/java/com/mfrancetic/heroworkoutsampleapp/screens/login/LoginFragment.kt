@@ -1,6 +1,7 @@
 package com.mfrancetic.heroworkoutsampleapp.screens.login
 
 import android.content.Context
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -83,11 +84,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun displaySnackbarFieldsInvalid() {
+        val snackbar =
         Snackbar.make(
             requireView(),
             getString(R.string.all_fields_must_be_valid),
             Snackbar.LENGTH_LONG
-        ).show()
+        )
+        snackbar.setTextColor(ContextCompat.getColor(fragmentContext, R.color.colorSnackbarText))
+        snackbar.show()
     }
 
     private fun hideKeyboard() {
