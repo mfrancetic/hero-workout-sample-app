@@ -6,23 +6,23 @@ import androidx.lifecycle.ViewModel
 
 class LoginViewModel : ViewModel() {
 
-    private val _changeThemeEvent = MutableLiveData<Boolean>()
+    private val _changeToDarkThemeEvent = MutableLiveData<Boolean>()
     val changeThemeEvent: LiveData<Boolean>
-        get() = _changeThemeEvent
+        get() = _changeToDarkThemeEvent
 
     init {
-        _changeThemeEvent.value = false
+        _changeToDarkThemeEvent.value = true
     }
 
     fun onLightThemeButtonClicked() {
-        _changeThemeEvent.value = true
+        _changeToDarkThemeEvent.value = false
     }
 
     fun onDarkThemeButtonClicked() {
-        _changeThemeEvent.value = false
+        _changeToDarkThemeEvent.value = true
     }
 
     fun onChangeThemeEventDone() {
-        _changeThemeEvent.value = null
+        _changeToDarkThemeEvent.value = null
     }
 }
