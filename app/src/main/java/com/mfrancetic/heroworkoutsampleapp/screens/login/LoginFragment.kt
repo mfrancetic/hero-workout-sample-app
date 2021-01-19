@@ -109,7 +109,7 @@ class LoginFragment : Fragment() {
         val isEmailValid = isEmailAddressValid(email)
         if (isEmailValid) {
             binding.emailLayout.isErrorEnabled = !isEmailValid
-        } else {
+        } else if (email.isNotEmpty()){
             binding.emailEditText.error = getString(R.string.email_invalid)
         }
         return isEmailValid
